@@ -1,0 +1,19 @@
+{
+  "menu": "Menu",
+  "membership": "Membership",
+  "management": "Management",
+  "settings": "Settings",
+  "logout": "Logout",
+  "change_account": "Change Account",
+  "order": "Order",
+  "total": "Total",
+  "cash": "Cash",
+  "qr_code": "QR Code",
+  "visa_card": "Visa Card",
+  "payment": "Payment",
+  "mode_of_service": "Mode of service",
+  "dine_in": "Dine in",
+  "take_away": "Take away",
+  "pre_order_pickup": "Pre-order",
+  "table" : "Table"
+}

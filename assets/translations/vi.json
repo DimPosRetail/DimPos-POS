@@ -1,0 +1,19 @@
+{
+  "menu": "Thực đơn",
+  "membership": "Thành viên",
+  "management": "Quản lý",
+  "settings": "Cài đặt",
+  "logout": "Đăng xuất",
+  "change_account": "Đổi tài khoản",
+  "order": "Đơn hàng",
+  "total": "Tổng cộng",
+  "cash": "Tiền mặt",
+  "qr_code": "Mã QR",
+  "visa_card": "Thẻ Visa",
+  "payment": "Thanh toán",
+  "mode_of_service": "Kiểu phục vụ",
+  "dine_in": "Tại chỗ",
+  "take_away": "Mang đi",
+  "pre_order_pickup": "Đặt trước",
+  "table" : "Bàn"
+}

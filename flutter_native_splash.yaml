@@ -1,0 +1,15 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  web: true
+
+  color: "#ffffff"
+  image: assets/icons/logo.png
+  # branding: assets/images/splash_branding.png
+
+  android_12:
+    image: assets/icons/logo.png
+    # branding: assets/images/splash_branding.png
+  ios_content_mode: scaleAspectFit
+  image_web: assets/icons/logo.png
+  color_dark_web: "#000000"

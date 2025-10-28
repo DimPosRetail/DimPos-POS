@@ -1,0 +1,15 @@
+enum ApiUrl {
+  base,
+  identity,
+  menu,
+  cart,
+  paymentMethod,
+  cartItem,
+  cartAppliedPromotionDetail,
+  store,
+  promotion,
+  basket,
+  order,
+  notification,
+  inventory,
+}

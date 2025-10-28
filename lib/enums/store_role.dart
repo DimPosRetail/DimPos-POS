@@ -1,0 +1,1 @@
+enum StoreRole { Staff }

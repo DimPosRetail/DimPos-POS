@@ -1,0 +1,1 @@
+enum ModifierGroupSelectedType { Single, Multiple }

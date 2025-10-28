@@ -1,0 +1,4 @@
+enum PrinterDeviceEnum {
+  bluetooth,
+  usb,
+}

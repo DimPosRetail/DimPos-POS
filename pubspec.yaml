@@ -1,0 +1,199 @@
+name: dimpos_store
+description: "A new Flutter project."
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  go_router: ^14.6.2
+  dio: ^5.7.0
+  envied: ^1.1.1
+
+  jwt_decoder: ^2.0.1
+
+  flutter_svg: ^2.0.17
+  cached_network_image: ^3.4.1
+  flutter_cache_manager: ^3.4.1
+
+  riverpod_annotation: ^2.6.1
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+  flutter_riverpod: ^2.6.1
+  # flutter_keyboard_visibility: ^6.0.0
+
+  shared_preferences: ^2.3.5
+
+  flutter_native_splash: ^2.4.4
+  flutter_launcher_icons: ^0.14.3
+  easy_localization: ^3.0.7+1
+
+  logger: ^2.5.0
+  flutter_dash: ^1.0.0
+  connectivity_plus: ^6.1.4
+  firebase_core: ^2.14.0
+  flutter_screenutil: ^5.9.3
+  drift: ^2.26.1
+  intl: ^0.20.0
+  qr_flutter: ^4.1.0
+  fluttertoast: ^8.2.12
+  toastification: ^3.0.3
+  signalr_netcore: ^1.4.3
+  just_audio: ^0.10.4
+  printing: ^5.10.2
+  ping_discover_network_forked: ^0.0.1
+  http: ^1.1.0
+  network_info_plus: ^5.0.0
+  permission_handler: ^11.0.1
+  esc_pos_utils_plus: ^2.0.1
+  image: ^4.0.0
+  pdfx: ^2.9.2
+  
+flutter_launcher_icons:
+  image_path: "assets/icons/logo.png"
+  remove_alpha_ios: true
+  android: "launcher_icon"
+  ios: true
+  web:
+    generate: true
+    image_path: "assets/icons/logo.png"
+  windows:
+    generate: true
+    image_path: "assets/icons/logo.png"
+  macos:
+    generate: true
+    image_path: "assets/icons/logo.png"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.15
+  riverpod_generator: ^2.6.3
+  riverpod_lint: ^2.6.3
+  envied_generator: ^1.1.1
+  freezed: ^2.5.7
+  json_serializable: ^6.9.0
+  analyzer: 7.3.0
+  analyzer_plugin: 0.12.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Black.otf
+          weight: 900
+          style: normal
+        - asset: assets/fonts/Inter-BlackItalic.otf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/Inter-Bold.otf
+          weight: 700
+          style: normal
+        - asset: assets/fonts/Inter-BoldItalic.otf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Inter-ExtraBold.otf
+          weight: 800
+          style: normal
+        - asset: assets/fonts/Inter-ExtraBoldItalic.otf
+          weight: 800
+          style: italic
+        - asset: assets/fonts/Inter-ExtraLight.otf
+          weight: 200
+          style: normal
+        - asset: assets/fonts/Inter-ExtraLightItalic.otf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Inter-Italic.otf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Inter-Light.otf
+          weight: 300
+          style: normal
+        - asset: assets/fonts/Inter-LightItalic.otf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Inter-Medium.otf
+          weight: 500
+          style: normal
+        - asset: assets/fonts/Inter-MediumItalic.otf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Inter-Regular.otf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/Inter-SemiBold.otf
+          weight: 600
+          style: normal
+        - asset: assets/fonts/Inter-SemiBoldItalic.otf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/Inter-Thin.otf
+          weight: 100
+          style: normal
+        - asset: assets/fonts/Inter-ThinItalic.otf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/Inter-V.ttf
+        - asset: assets/fonts/Inter_18pt-Regular.ttf
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/translations/
+    # images
+    - assets/images/logo.png
+    - assets/images/product.png
+    - assets/images/product2.png
+    - assets/images/Image-not-found.png
+    - assets/images/loading_error.png
+    - assets/images/loading.svg
+    - assets/images/confirm.png
+    - assets/images/welcome.png
+    - assets/images/printer.png
+    # icons
+    - assets/icons/menu.png
+    - assets/icons/management.png
+    - assets/icons/setting.png
+    - assets/icons/membership.png
+    - assets/icons/logout.png
+    - assets/icons/discount.png
+    - assets/icons/cash.png
+    - assets/icons/qr_code.png
+    - assets/icons/visa_card.png
+    - assets/icons/calendar.png
+    - assets/icons/clock.png
+    - assets/icons/notification.png
+    - assets/icons/avatar.png
+    - assets/icons/category.png
+    - assets/icons/search.png
+    - assets/icons/order.png
+    - assets/icons/filled_setting.png
+    - assets/icons/filled_account.png
+    - assets/icons/filled_data.png
+    - assets/icons/filled_printer.png
+    - assets/icons/filtered.png
+    - assets/icons/update.png
+    # sounds
+    - assets/sounds/notification.mp3

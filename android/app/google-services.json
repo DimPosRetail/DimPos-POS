@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "156434575324",
+    "project_id": "dimpos-8b7e2",
+    "storage_bucket": "dimpos-8b7e2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156434575324:android:2bb997b766968b470ee919",
+        "android_client_info": {
+          "package_name": "com.capstone.dimpos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKoMwkALVSWtxQKF0UiOFIVWjfcNEovaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

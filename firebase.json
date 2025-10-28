@@ -1,0 +1,40 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "site": "dimpos-pos",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "dimpos-4ba2c",
+          "appId": "1:156434575324:android:2bb997b766968b470ee919",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "dimpos-4ba2c",
+          "configurations": {
+            "android": "1:156434575324:android:2bb997b766968b470ee919",
+            "ios": "1:156434575324:ios:c8139e3fcbd2c2360ee919",
+            "macos": "1:156434575324:ios:c8139e3fcbd2c2360ee919",
+            "web": "1:156434575324:web:6218e40e6a7e0dd20ee919",
+            "windows": "1:156434575324:web:98fe9e56c4699aff0ee919"
+          }
+        }
+      }
+    }
+  }
+}

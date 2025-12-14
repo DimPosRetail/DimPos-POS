@@ -944,6 +944,9 @@ class _PaymentMethodDialogState extends ConsumerState<PaymentMethodDialog>
                                                       paymentMethod:
                                                           selectedPaymentMethod
                                                               .paymentMethod,
+                                                      customerLoyaltyCardNumberSnapshot:
+                                                          selectedCart
+                                                              .customerLoyaltyCardNumberSnapshot,
                                                     );
                                                 await ref
                                                     .read(cartViewModelProvider

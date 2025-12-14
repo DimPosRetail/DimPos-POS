@@ -11,6 +11,7 @@ class Order with _$Order {
     required int type,
     required int status,
     String? customerNameSnapshot,
+    String? customerLoyaltyCardNumberSnapshot,
     required double totalAmount,
     double? subTotalAmount,
     double? discountAmount,

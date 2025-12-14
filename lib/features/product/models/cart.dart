@@ -15,6 +15,7 @@ class Cart with _$Cart {
     String? staffAccountIdCreating,
     String? customerIdLink,
     String? customerNameSnapshot,
+    String? customerLoyaltyCardNumberSnapshot,
     // String? modeOfService,
     required int serviceMethod,
     int? takeNumberDineIn,

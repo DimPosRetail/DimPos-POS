@@ -723,21 +723,21 @@ class CartViewModel extends _$CartViewModel {
     await getCarts(state.value!.selectedCartIndex);
   }
 
-  Future<void> updateCartCustomerNameSnapshot({
+  Future<void> updateCartCustomerLoyaltyCardNumberSnapshot({
     required String cartId,
-    required String customerNameSnapshot,
+    required String customerLoyaltyCardNumberSnapshot,
   }) async {
     if (state.value?.carts == null) return;
     state = AsyncData(
       state.value!.copyWith(isUpdatingCart: true),
     );
-    if (customerNameSnapshot.isEmpty) {
+    if (customerLoyaltyCardNumberSnapshot.isEmpty) {
       return;
     }
 
     await ref.read(cartRepositoryProvider).updateCart(
           cartId: cartId,
-          customerNameSnapshot: customerNameSnapshot,
+          customerLoyaltyCardNumberSnapshot: customerLoyaltyCardNumberSnapshot,
         );
     await getCarts(state.value!.selectedCartIndex);
   }

@@ -17,19 +17,19 @@ class MembershipDialog extends ConsumerStatefulWidget {
 
 class _MembershipDialogState extends ConsumerState<MembershipDialog> {
   // late List<Customer> _initialCustomers;
-  TextEditingController? _customerNameSnapshotController;
+  TextEditingController? _customerLoyaltyCardNumberSnapshotController;
   String? _validationError;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     // _initialCustomers = <Customer>[];
-    _customerNameSnapshotController = TextEditingController();
+    _customerLoyaltyCardNumberSnapshotController = TextEditingController();
   }
 
   @override
   void dispose() {
-    _customerNameSnapshotController?.dispose();
+    _customerLoyaltyCardNumberSnapshotController?.dispose();
     super.dispose();
   }
 
@@ -43,7 +43,7 @@ class _MembershipDialogState extends ConsumerState<MembershipDialog> {
   }
 
   void _handleApplyButtonTap() async {
-    final text = _customerNameSnapshotController?.text.trim() ?? "";
+    final text = _customerLoyaltyCardNumberSnapshotController?.text.trim() ?? "";
 
     setState(() {
       _validationError = _validateCustomerName(text);
@@ -54,13 +54,13 @@ class _MembershipDialogState extends ConsumerState<MembershipDialog> {
     }
 
     try {
-      await _handleCustomerNameIntoCart(text);
+      await _handleCustomerLoyaltyCardNumberSnapshotIntoCart(text);
 
       // Hiển thị thông báo thành công
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Đã cập nhật tên khách hàng: $text'),
+            content: Text('Đã cập nhật mã thẻ khách hàng: $text'),
             backgroundColor: AppColors.watermelon100,
           ),
         );
@@ -81,9 +81,9 @@ class _MembershipDialogState extends ConsumerState<MembershipDialog> {
     }
   }
 
-  Future<void> _handleCustomerNameIntoCart(String customerName) async {
-    if (customerName.isEmpty) {
-      throw Exception('Tên khách hàng không được để trống');
+  Future<void> _handleCustomerLoyaltyCardNumberSnapshotIntoCart(String customerLoyaltyCardNumberSnapshot) async {
+    if (customerLoyaltyCardNumberSnapshot.isEmpty) {
+      throw Exception('Số thẻ thành viên không được để trống');
     }
 
     final cartViewModel = ref.read(cartViewModelProvider);
@@ -112,9 +112,9 @@ class _MembershipDialogState extends ConsumerState<MembershipDialog> {
     // Gọi method cập nhật
     await ref
         .read(cartViewModelProvider.notifier)
-        .updateCartCustomerNameSnapshot(
+        .updateCartCustomerLoyaltyCardNumberSnapshot(
           cartId: currentCart.id,
-          customerNameSnapshot: customerName,
+          customerLoyaltyCardNumberSnapshot: customerLoyaltyCardNumberSnapshot,
         );
   }
 
@@ -320,13 +320,13 @@ class _MembershipDialogState extends ConsumerState<MembershipDialog> {
                               ),
                               alignment: Alignment.center,
                               child: TextField(
-                                controller: _customerNameSnapshotController,
+                                controller: _customerLoyaltyCardNumberSnapshotController,
                                 decoration: InputDecoration(
                                   isDense: true,
                                   contentPadding: EdgeInsets.symmetric(
                                       horizontal: 10.w, vertical: 5.h),
                                   border: InputBorder.none,
-                                  hintText: "Nhập tên khách hàng",
+                                  hintText: "Nhập số thẻ thành viên",
                                   hintStyle: context.bodySmall.copyWith(
                                     color:
                                         context.componentNameTextLighterColor,
@@ -422,13 +422,13 @@ class _MembershipDialogState extends ConsumerState<MembershipDialog> {
                                 ),
                                 alignment: Alignment.center,
                                 child: TextField(
-                                  controller: _customerNameSnapshotController,
+                                  controller: _customerLoyaltyCardNumberSnapshotController,
                                   decoration: InputDecoration(
                                     isDense: true,
                                     contentPadding: EdgeInsets.symmetric(
                                         horizontal: 10.w, vertical: 5.h),
                                     border: InputBorder.none,
-                                    hintText: "Nhập tên khách hàng",
+                                    hintText: "Nhập số thẻ thành viên",
                                     hintStyle: context.bodySmall.copyWith(
                                       color:
                                           context.componentNameTextLighterColor,

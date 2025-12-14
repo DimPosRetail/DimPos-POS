@@ -277,6 +277,7 @@ class OrderViewModel extends _$OrderViewModel {
   Future<void> createOrder({
     required String brandId,
     String? customerId,
+    String? customerLoyaltyCardNumberSnapshot,
     required String storePaymentMethodConfigId,
     required Cart cart,
     required int paymentMethod,
@@ -334,6 +335,7 @@ class OrderViewModel extends _$OrderViewModel {
             note: cart.customerNotesForOrder ?? cart.staffNotesForOrder,
             storePaymentMethodConfigId: storePaymentMethodConfigId,
             orderItems: orderItems,
+            customerLoyaltyCardNumberSnapshot: customerLoyaltyCardNumberSnapshot,
             promotionRuleIds: cart.promotionsApplied
                 ?.map((promotion) => promotion.promotionRuleId)
                 .toList(),

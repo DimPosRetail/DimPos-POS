@@ -136,14 +136,14 @@ class CartRepository {
     required String cartId,
     int? serviceMethod,
     int? takeNumberDineIn,
-    String? customerNameSnapshot,
+    String? customerLoyaltyCardNumberSnapshot,
   }) async {
     await apiClient.getClient(ApiUrl.basket).patch(
       '/carts/$cartId',
       data: {
         "serviceMethod": serviceMethod,
         "takeNumberDineIn": takeNumberDineIn,
-        "customerNameSnapshot": customerNameSnapshot
+        "customerLoyaltyCardNumberSnapshot": customerLoyaltyCardNumberSnapshot,
       },
     );
   }

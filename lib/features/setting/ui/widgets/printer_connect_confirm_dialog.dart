@@ -2,7 +2,6 @@ import 'package:dimpos_store/constants/assets.dart';
 import 'package:dimpos_store/enums/device_type.dart';
 import 'package:dimpos_store/extensions/build_context_extension.dart';
 import 'package:dimpos_store/extensions/size_config_extension.dart';
-import 'package:dimpos_store/features/common/ui/widgets/show_error_dialog.dart';
 import 'package:dimpos_store/features/product/ui/view_models/cart_view_model.dart';
 import 'package:dimpos_store/features/setting/ui/view_models/printer_view_model.dart';
 import 'package:dimpos_store/theme/app_colors.dart';
@@ -25,7 +24,7 @@ class _PrinterConnectConfirmDialogState
     extends ConsumerState<PrinterConnectConfirmDialog> {
   // late List<Customer> _initialCustomers;
   // TextEditingController? _customerNameSnapshotController;
-  String? _validationError;
+  // String? _validationError;
   @override
   void initState() {
     // TODO: implement initState
@@ -40,8 +39,8 @@ class _PrinterConnectConfirmDialogState
     super.dispose();
   }
 
-  Future<void> _handleCustomerNameIntoCart(String customerName) async {
-    if (customerName.isEmpty) {
+  Future<void> _handleCustomerLoyaltyCardNumberSnapshotIntoCart(String customerLoyaltyCardNumberSnapshot) async {
+    if (customerLoyaltyCardNumberSnapshot.isEmpty) {
       throw Exception('Tên khách hàng không được để trống');
     }
 
@@ -71,9 +70,9 @@ class _PrinterConnectConfirmDialogState
     // Gọi method cập nhật
     await ref
         .read(cartViewModelProvider.notifier)
-        .updateCartCustomerNameSnapshot(
+        .updateCartCustomerLoyaltyCardNumberSnapshot(
           cartId: currentCart.id,
-          customerNameSnapshot: customerName,
+          customerLoyaltyCardNumberSnapshot: customerLoyaltyCardNumberSnapshot,
         );
   }
 
@@ -104,7 +103,7 @@ class _PrinterConnectConfirmDialogState
     EdgeInsets buttonMargin =
         EdgeInsets.symmetric(vertical: 0.w, horizontal: 8.w);
     double buttonFontSize = 16.sp;
-    double printerNameFontSize = 20.sp;
+    // double printerNameFontSize = 20.sp;
 
     TextStyle buttonTextStyle = context.titleMedium.copyWith(
       color: context.componentNameTextColor,
